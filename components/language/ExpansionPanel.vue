@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header>
-      <icon-language :language="language" />
+      <language-icon :language="language" />
       <v-col class="py-0">
         <v-card-title>
           {{ language.name }}

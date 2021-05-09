@@ -22,14 +22,32 @@
           (if you don't consider the look)
         </v-card-subtitle>
         <v-divider />
-        <v-expansion-panels>
-          <language-expansion-panel
-            v-for="(language, index) in languages"
-            :key="index"
-            :language="language"
-            :projects="getProject(language)"
-          />
-        </v-expansion-panels>
+
+        <v-tabs fixed-tabs>
+          <v-tab>Languages</v-tab>
+          <v-tab>Projects</v-tab>
+
+          <v-tab-item>
+            <v-expansion-panels>
+              <language-expansion-panel
+                v-for="(language, index) in languages"
+                :key="index"
+                :language="language"
+                :projects="getProject(language)"
+              />
+            </v-expansion-panels>
+          </v-tab-item>
+
+          <v-tab-item>
+            <v-list>
+              <project-list-item
+                v-for="(project, index) in projects"
+                :key="index"
+                :project="project"
+              />
+            </v-list>
+          </v-tab-item>
+        </v-tabs>
       </v-card>
     </v-col>
   </v-row>
@@ -41,6 +59,7 @@ export default {
     projects: [
       {
         name: 'datacrunch',
+        description: 'The startup I currently part of',
         link: 'https://github.com/datacrunch-com',
         languages: [
           'java',
@@ -56,41 +75,50 @@ export default {
       },
       {
         name: '42',
+        description: 'All of my work from the 42 school',
         link: 'https://github.com/Caceresenzo/42',
         languages: ['c', 'c++', 'python', 'docker', 'bash', 'git'],
       },
       {
         name: '42 Piscine',
+        description: 'All of my work from the piscine of 42 school',
         link: 'https://github.com/Caceresenzo/42',
         languages: ['c', 'bash', 'git'],
       },
       {
         name: 'caceresenzo.dev (this)',
+        description: 'Source code of this website',
         link: 'https://github.com/Caceresenzo/caceresenzo.dev',
         languages: ['docker', 'vue.js', 'nginx', 'git'],
       },
       {
         name: 'My IUT Schedule',
+        description:
+          'A simple calendar-like app for checking next lessons from the IUT I left for 42',
         link: 'https://github.com/Caceresenzo/My-IUT-Schedule',
         languages: ['android', 'git'],
       },
       {
         name: 'BoxPlay',
+        description: 'A Netflix clone, but even better ;)',
         link: 'https://github.com/Caceresenzo/boxplay-android',
         languages: ['android', 'git'],
       },
       {
         name: 'Mon Guide Musculation',
+        description: 'My first Flutter app',
         link: 'https://github.com/Caceresenzo/MonGuideMusculation',
         languages: ['flutter', 'git'],
       },
       {
         name: 'Negro SA',
+        description: 'Work done for Negro SA',
         link: 'https://github.com/Caceresenzo/negrosa',
         languages: ['java', 'spring', 'vue.js', 'flutter', 'docker', 'git'],
       },
       {
         name: 'JELDWEN',
+        description: 'Work done for JELDWEN',
         link: 'https://github.com/Caceresenzo/jeldwen',
         languages: ['java', 'spring', 'vue.js', 'docker', 'git'],
       },
