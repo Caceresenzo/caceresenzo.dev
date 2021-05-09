@@ -192,6 +192,28 @@ export default {
       },
     ],
   }),
+  head() {
+    return {
+      title: 'Home',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Enzo CACERES - a freelance developer personal website',
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'FreeLance, FullStack',
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Yet another freelance developer personal website',
+        },
+      ],
+    }
+  },
   methods: {
     getProject(language) {
       const lower = language.name.toLowerCase()

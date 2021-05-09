@@ -9,7 +9,23 @@ export default {
   head() {
     return {
       title: 'Blog',
-      description: 'Some posts I write for anyone to read',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Some posts I write for anyone to read',
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'Blog, FreeLance, FullStack',
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'An empty blog, for now...',
+        },
+      ],
     }
   },
 }
