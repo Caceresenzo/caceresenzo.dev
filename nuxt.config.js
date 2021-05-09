@@ -72,6 +72,12 @@ export default {
     },
   },
 
+  vueMeta: {
+    debounceWait: 250,
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extractCSS: true,
+  },
 }
