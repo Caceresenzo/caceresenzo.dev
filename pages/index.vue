@@ -152,7 +152,7 @@ export default {
       },
       {
         name: 'Docker',
-        description: "I can't leave without them now...",
+        description: "I can't live without them now...",
         icon: 'docker/docker-original.svg',
       },
       {
