@@ -1,48 +1,42 @@
+<script lang="ts" setup>
+const props = defineProps<{
+  language: {
+    icon: string;
+  };
+  projects: Array<object>;
+}>();
+</script>
+
 <template>
   <v-expansion-panel>
-    <v-expansion-panel-header>
-      <language-icon :language="language" />
+    <v-expansion-panel-title>
+      <v-avatar size="80">
+        <img
+          max-height="64"
+          max-width="64"
+          :src="`https://raw.githubusercontent.com/devicons/devicon/master/icons/${props.language.icon}`"
+        />
+      </v-avatar>
       <v-col class="py-0">
         <v-card-title>
-          {{ language.name }}
+          {{ props.language.name }}
         </v-card-title>
         <v-card-subtitle>
-          {{ language.description }}
+          {{ props.language.description }}
         </v-card-subtitle>
       </v-col>
-    </v-expansion-panel-header>
-    <v-expansion-panel-content>
-      <v-list v-if="projects" dense>
-        <v-subheader>Projects</v-subheader>
-        <v-list-item-group color="primary">
-          <v-list-item
-            v-for="(project, index2) in projects"
-            :key="index2"
-            link
-            target="_blank"
-            :href="project.link"
-          >
-            <v-list-item-content>
-              <v-list-item-title>{{ project.name }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
+    </v-expansion-panel-title>
+    <v-expansion-panel-text>
+      <v-list v-if="props.projects" dense>
+        <v-list-subheader>Projects</v-list-subheader>
+        <v-list-item
+          v-for="(project, index2) in props.projects"
+          :key="index2"
+          target="_blank"
+          :href="project.link"
+          :title="project.name"
+        />
       </v-list>
-    </v-expansion-panel-content>
+    </v-expansion-panel-text>
   </v-expansion-panel>
 </template>
-
-<script>
-export default {
-  props: {
-    language: {
-      type: Object,
-      required: true,
-    },
-    projects: {
-      type: [Array, null],
-      default: () => [],
-    },
-  },
-}
-</script>

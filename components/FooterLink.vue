@@ -1,38 +1,16 @@
 <template>
-  <v-tooltip top>
-    <template #activator="{ on, attrs }">
-      <v-btn
-        color="primary"
-        dark
-        icon
-        link
-        target="_blank"
-        :href="url"
-        v-bind="attrs"
-        v-on="on"
-      >
-        <v-icon> mdi-{{ icon }} </v-icon>
-      </v-btn>
-    </template>
-    <span>{{ description }}</span>
-  </v-tooltip>
+  <v-btn color="primary" target="_blank" :href="props.url" icon>
+    <v-icon>{{ props.icon }}</v-icon>
+    <v-tooltip activator="parent" location="top">
+      {{ props.description }}
+    </v-tooltip>
+  </v-btn>
 </template>
 
-<script>
-export default {
-  props: {
-    description: {
-      type: String,
-      required: true,
-    },
-    icon: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-  },
-}
+<script lang="ts" setup>
+const props = defineProps<{
+  description: string;
+  icon: string;
+  url: string;
+}>();
 </script>
