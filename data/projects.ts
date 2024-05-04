@@ -10,7 +10,7 @@ export interface Project {
     name: string,
     description: string,
     logo?: string,
-    languages: Array<string>
+    skills: Array<string>
     quality: Quality,
     link?: string,
     internal?: boolean,
@@ -23,14 +23,14 @@ export interface Quality {
     color: string;
 }
 
-function collection(collection: Omit<Project, "languages">): Project {
-    const languages = [
-        ...new Set(collection.children?.flatMap((project) => project.languages) || []),
+function collection(collection: Omit<Project, "skills">): Project {
+    const skills = [
+        ...new Set(collection.children?.flatMap((project) => project.skills) || []),
     ].sort()
 
     return {
         ...collection,
-        languages,
+        skills,
     }
 }
 
@@ -49,7 +49,7 @@ export const projects: Array<Project> = [
                 name: "Competition Platform",
                 description: "Main CrunchDAO user-facing platform",
                 link: "https://hub.crunchdao.com/",
-                languages: [
+                skills: [
                     "microservice",
                     "java",
                     "spring",
@@ -67,7 +67,7 @@ export const projects: Array<Project> = [
                 name: "Crunch-CLI",
                 description: "Competition Platform's CLI, similar to the Git-CLI",
                 link: "https://pypi.org/project/crunch-cli/",
-                languages: [
+                skills: [
                     "python",
                 ],
                 quality: {
@@ -78,7 +78,7 @@ export const projects: Array<Project> = [
             {
                 name: "Broker Toolings",
                 description: "Broker tracker and tooling for easier team access",
-                languages: [
+                skills: [
                     "python",
                     "grafana",
                 ],
@@ -91,7 +91,7 @@ export const projects: Array<Project> = [
             {
                 name: "Airflow Pipeline",
                 description: "Main production pipeline that handle all of the data",
-                languages: [
+                skills: [
                     "python",
                     "airflow",
                     "ci/cd",
@@ -105,7 +105,7 @@ export const projects: Array<Project> = [
             {
                 name: "Data Provider Client CLIs",
                 description: "Dedicated CLIs for each of our data providers",
-                languages: [
+                skills: [
                     "python",
                 ],
                 internal: true,
@@ -117,7 +117,7 @@ export const projects: Array<Project> = [
             {
                 name: "readwrite",
                 description: "Fast debugging utility to read/write file of any time",
-                languages: [
+                skills: [
                     "python",
                 ],
                 link: "https://pypi.org/project/readwrite/",
@@ -129,7 +129,7 @@ export const projects: Array<Project> = [
             {
                 name: "Strategy Runner",
                 description: "Internal strategy code runner with checkpoint support for fast iteration",
-                languages: [
+                skills: [
                     "python",
                 ],
                 internal: true,
@@ -141,7 +141,7 @@ export const projects: Array<Project> = [
             {
                 name: "DeSci Platform",
                 description: "Decentralized Science platform allowing anyone to contribute to research papers of which the community vote to accept the changes",
-                languages: [
+                skills: [
                     "java",
                     "spring",
                     "vue.js",
@@ -157,7 +157,7 @@ export const projects: Array<Project> = [
             {
                 name: "Scrappers",
                 description: "Data scrapper for multiple website that can run 24/7 by rotating IP addresses",
-                languages: [
+                skills: [
                     "java",
                     "spring",
                     "proxy",
@@ -173,7 +173,7 @@ export const projects: Array<Project> = [
             {
                 name: "Backtester",
                 description: "Modular strategy backtester",
-                languages: [
+                skills: [
                     "python",
                 ],
                 link: "https://pypi.org/project/bktest/",
@@ -185,7 +185,7 @@ export const projects: Array<Project> = [
             {
                 name: "Sales Funnel",
                 description: "Funnel to make user sign a contract, verify their identity and then pay for buying $CRUNCHes",
-                languages: [
+                skills: [
                     "java",
                     "spring",
                     "javascript",
@@ -201,7 +201,7 @@ export const projects: Array<Project> = [
             {
                 name: "Custom Database with Index support",
                 description: "Custom database to index 1.2To of JSON data",
-                languages: [
+                skills: [
                     "python",
                     "c++",
                 ],
@@ -214,7 +214,7 @@ export const projects: Array<Project> = [
             {
                 name: "Pitch Dech ranking Platform",
                 description: "Send your pitch-deck and get scored by ChatGPT",
-                languages: [
+                skills: [
                     "java",
                     "spring",
                     "python",
@@ -229,7 +229,7 @@ export const projects: Array<Project> = [
             {
                 name: "Trading Platform",
                 description: "Unitified platform that can connect to multiple broker",
-                languages: [
+                skills: [
                     "java",
                     "spring",
                     "docker",
@@ -244,7 +244,7 @@ export const projects: Array<Project> = [
             {
                 name: "Web3 Contracts",
                 description: "Ethereum Contracts that handle the Crunch Token, vesting, staking, ...",
-                languages: [
+                skills: [
                     "web3",
                     "solidity",
                     "javascript",
@@ -272,7 +272,7 @@ export const projects: Array<Project> = [
                 name: "kfs",
                 description: "Mini kernel",
                 link: "https://github.com/Caceresenzo/42/tree/master/kfs-2",
-                languages: [
+                skills: [
                     "c++",
                 ],
                 quality: {
@@ -284,7 +284,7 @@ export const projects: Array<Project> = [
                 name: "ssl_md5",
                 description: "Remake of MD5sum and SHA256sum",
                 link: "https://github.com/Caceresenzo/42/tree/master/ft_ssl_md5",
-                languages: [
+                skills: [
                     "c",
                 ],
                 quality: {
@@ -296,7 +296,7 @@ export const projects: Array<Project> = [
                 name: "webserv",
                 description: "Remake of nginx",
                 link: "https://github.com/Caceresenzo/42/tree/master/webserv",
-                languages: [
+                skills: [
                     "c++",
                 ],
                 quality: {
@@ -308,7 +308,7 @@ export const projects: Array<Project> = [
                 name: "cloud-1",
                 description: "Deployment of a wordpress on AWS using Terraform",
                 link: "https://github.com/Caceresenzo/42/tree/master/cloud-1",
-                languages: [
+                skills: [
                     "docker",
                     "aws",
                     "terraform",
@@ -322,7 +322,7 @@ export const projects: Array<Project> = [
                 name: "scop",
                 description: "Simple 3D model viewer",
                 link: "https://github.com/Caceresenzo/42/tree/master/scop",
-                languages: [
+                skills: [
                     "c++",
                 ],
                 quality: {
@@ -334,7 +334,7 @@ export const projects: Array<Project> = [
                 name: "Inception-of-Things",
                 description: "Simple Kubernetes deployment on VMs using Vagrant",
                 link: "https://github.com/Caceresenzo/42/tree/master/Inception-of-Things",
-                languages: [
+                skills: [
                     "kubernetes",
                     "vagrant",
                 ],
@@ -347,7 +347,7 @@ export const projects: Array<Project> = [
                 name: "nm",
                 description: "Remake of Linux's nm utility",
                 link: "https://github.com/Caceresenzo/42/tree/master/nm",
-                languages: [
+                skills: [
                     "c",
                 ],
                 quality: {
@@ -359,7 +359,7 @@ export const projects: Array<Project> = [
                 name: "transcendence",
                 description: "Small multiplayer pong platform with friend and chat integration",
                 link: "https://github.com/Caceresenzo/42/tree/master/ft_transcendence",
-                languages: [
+                skills: [
                     "javascript",
                     "mysql",
                 ],
@@ -372,7 +372,7 @@ export const projects: Array<Project> = [
                 name: "containers",
                 description: "Remake of C++'s containers",
                 link: "https://github.com/Caceresenzo/42/tree/master/ft_containers",
-                languages: [
+                skills: [
                     "c++",
                 ],
                 quality: {
@@ -384,7 +384,7 @@ export const projects: Array<Project> = [
                 name: "cub3d",
                 description: "Simple ray-caster",
                 link: "https://github.com/Caceresenzo/42/tree/master/cub3d",
-                languages: [
+                skills: [
                     "c",
                 ],
                 quality: {
@@ -396,7 +396,7 @@ export const projects: Array<Project> = [
                 name: "printf",
                 description: "Remake of the `printf` function",
                 link: "https://github.com/Caceresenzo/42/tree/master/ft_printf",
-                languages: [
+                skills: [
                     "c",
                 ],
                 quality: {
@@ -411,7 +411,7 @@ export const projects: Array<Project> = [
         description: "All of my work from the piscine of 42 school",
         logo: fortyTwoLogo,
         link: "https://github.com/Caceresenzo/42",
-        languages: ["c", "bash", "git"],
+        skills: ["c", "bash", "git"],
         quality: {
             value: "school",
             color: "primary"
@@ -420,7 +420,7 @@ export const projects: Array<Project> = [
     {
         name: "Home Lab",
         description: "Hosting a HP DL380P Gen9 at home",
-        languages: ["bash", "sys-admin", "esxi"],
+        skills: ["bash", "sys-admin", "esxi"],
         quality: {
             value: "hobby",
             color: "primary"
@@ -430,7 +430,7 @@ export const projects: Array<Project> = [
         name: "caceresenzo.dev (this)",
         description: "Source code of this website",
         link: "https://github.com/Caceresenzo/caceresenzo.dev",
-        languages: ["docker", "vue.js", "nginx", "git"],
+        skills: ["docker", "vue.js", "nginx", "git"],
         quality: {
             value: "average",
             color: "warning"
@@ -442,7 +442,7 @@ export const projects: Array<Project> = [
             "A simple calendar-like app for checking next lessons from the IUT I left for 42",
         logo: myIutSchedule,
         link: "https://github.com/Caceresenzo/My-IUT-Schedule",
-        languages: ["android", "git"],
+        skills: ["android", "git"],
         quality: {
             value: "good-ish",
             color: "success"
@@ -453,7 +453,7 @@ export const projects: Array<Project> = [
         description: "A Netflix clone, but even better ;)",
         logo: boxplayLogo,
         link: "https://github.com/Caceresenzo/boxplay-android",
-        languages: ["android", "git"],
+        skills: ["android", "git"],
         quality: {
             value: "good-",
             color: "success"
@@ -464,7 +464,7 @@ export const projects: Array<Project> = [
         description: "My first Flutter app",
         logo: monGuideMusculationLogo,
         link: "https://github.com/Caceresenzo/MonGuideMusculation",
-        languages: ["flutter", "git"],
+        skills: ["flutter", "git"],
         quality: {
             value: "average-",
             color: "warning"
@@ -475,7 +475,7 @@ export const projects: Array<Project> = [
         description: "Work done for Negro SA",
         logo: negrosaLogo,
         link: "https://github.com/Caceresenzo/negrosa",
-        languages: ["java", "spring", "vue.js", "flutter", "docker", "git"],
+        skills: ["java", "spring", "vue.js", "flutter", "docker", "git"],
         quality: {
             value: "average-",
             color: "warning"
@@ -486,7 +486,7 @@ export const projects: Array<Project> = [
         description: "Work done for JELDWEN",
         logo: jeldwenLogo,
         link: "https://github.com/Caceresenzo/jeldwen",
-        languages: ["java", "spring", "vue.js", "docker", "git"],
+        skills: ["java", "spring", "vue.js", "docker", "git"],
         quality: {
             value: "average-",
             color: "warning"

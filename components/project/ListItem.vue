@@ -43,12 +43,12 @@ const props = defineProps<{
     </v-list-item-subtitle>
     <v-list-item-subtitle>
       <v-chip
-        v-for="language in props.project.languages"
-        :key="language"
+        v-for="skill in props.project.skills"
+        :key="skill"
         size="x-small"
         class="mr-2 mt-1"
       >
-        {{ language }}
+        {{ skill }}
       </v-chip>
     </v-list-item-subtitle>
     <template v-if="props.project.logo" #append>

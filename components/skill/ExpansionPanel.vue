@@ -2,7 +2,7 @@
 import type { Project } from '~/data/projects';
 
 const props = defineProps<{
-  language: {
+  skill: {
     icon: string;
   };
   projects: Array<Project>;
@@ -16,15 +16,15 @@ const props = defineProps<{
         <img
           height="56"
           width="56"
-          :src="`https://raw.githubusercontent.com/devicons/devicon/master/icons/${props.language.icon}`"
+          :src="`https://raw.githubusercontent.com/devicons/devicon/master/icons/${props.skill.icon}`"
         />
       </v-avatar>
       <v-col class="py-0">
         <v-card-title>
-          {{ props.language.name }}
+          {{ props.skill.name }}
         </v-card-title>
         <v-card-subtitle>
-          {{ props.language.description }}
+          {{ props.skill.description }}
         </v-card-subtitle>
       </v-col>
     </v-expansion-panel-title>

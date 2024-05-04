@@ -46,7 +46,7 @@ const footerLinks = [
         </v-chip>
       </v-btn>
       <v-btn class="ml-2" to="/portfolio"> portfolio </v-btn>
-      <v-btn class="ml-2" to="/languages"> languages </v-btn>
+      <v-btn class="ml-2" to="/skills"> skills </v-btn>
     </v-app-bar-title>
   </v-app-bar>
   <v-main>

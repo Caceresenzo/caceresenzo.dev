@@ -1,10 +1,10 @@
-export interface Language {
+export interface Skill {
     name: string,
     description: string,
     icon: string
 }
 
-export const languages: Array<Language> = [
+export const skills: Array<Skill> = [
     {
         name: "Java",
         description: "My favorite language, and pretty good at it",
