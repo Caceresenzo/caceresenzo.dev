@@ -16,18 +16,37 @@ const props = defineProps<{
         :color="props.project.quality.color"
         style="height: 16px"
       >
+        <v-icon start size="small">mdi-xml</v-icon>
         {{ props.project.quality.value }}
+      </v-chip>
+      <v-chip
+        v-if="props.project.internal"
+        size="small"
+        class="ml-2"
+        color="error"
+        style="height: 16px"
+      >
+        INTERNAL
+      </v-chip>
+      <v-chip
+        v-if="props.project.deprecated"
+        size="small"
+        class="ml-2"
+        color="error"
+        style="height: 16px"
+      >
+        DEPRECATED
       </v-chip>
     </v-list-item-title>
     <v-list-item-subtitle>
       {{ props.project.description }}
     </v-list-item-subtitle>
-    <v-list-item-subtitle class="my-1">
+    <v-list-item-subtitle>
       <v-chip
         v-for="language in props.project.languages"
         :key="language"
         size="x-small"
-        class="mr-2"
+        class="mr-2 mt-1"
       >
         {{ language }}
       </v-chip>
