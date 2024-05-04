@@ -412,6 +412,15 @@ export const projects: Array<Project> = [
         },
     },
     {
+        name: "Home Lab",
+        description: "Hosting a HP DL380P Gen9 at home",
+        languages: ["bash", "sys-admin", "esxi"],
+        quality: {
+            value: "hobby",
+            color: "primary"
+        },
+    },
+    {
         name: "caceresenzo.dev (this)",
         description: "Source code of this website",
         link: "https://github.com/Caceresenzo/caceresenzo.dev",
