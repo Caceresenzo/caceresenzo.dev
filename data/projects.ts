@@ -57,6 +57,8 @@ export const projects: Array<Project> = [
                     "javascript",
                     "git",
                     "python",
+                    "aws",
+                    "terraform",
                 ],
                 quality: {
                     value: "good-ish",

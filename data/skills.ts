@@ -21,6 +21,16 @@ export const skills: Array<Skill> = [
         icon: "python/python-original.svg",
     },
     {
+        name: "AWS",
+        description: "I try to avoid vendor lock-in",
+        icon: "amazonwebservices/amazonwebservices-plain-wordmark.svg"
+    },
+    {
+        name: "Terraform",
+        description: "Tricky to setup, but infinite peace afterward",
+        icon: "terraform/terraform-original.svg"
+    },
+    {
         name: "C",
         description: "Where are objects?",
         icon: "c/c-original.svg",
@@ -44,6 +54,11 @@ export const skills: Array<Skill> = [
         name: "MySQL",
         description: "For all my projects",
         icon: "mysql/mysql-original.svg",
+    },
+    {
+        name: "MongoDB",
+        description: "For all my projects that I can't model with MySQL",
+        icon: "mongodb/mongodb-original.svg",
     },
     {
         name: "Git",
