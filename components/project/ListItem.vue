@@ -1,20 +1,16 @@
 <script lang="ts" setup>
+import type { Project } from "~/data/projects";
+
 const props = defineProps<{
-  project: {
-    link: string;
-    name: string;
-    description: string;
-    languages: Array<string>;
-  };
+  project: Project;
 }>();
 </script>
 
 <template>
   <v-list-item
-    lines='two'
+    lines="two"
     target="_blank"
     :href="props.project.link"
-    prepend-icon="mdi-file-code"
     :title="props.project.name"
     :subtitle="props.project.description"
   >
@@ -28,5 +24,10 @@ const props = defineProps<{
         {{ language }}
       </v-chip>
     </v-list-item-subtitle>
+    <template v-if="props.project.logo" #append>
+      <v-avatar size="80">
+        <img height="56" width="56" :src="props.project.logo" />
+      </v-avatar>
+    </template>
   </v-list-item>
 </template>
