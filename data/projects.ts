@@ -7,7 +7,7 @@ export interface Project {
 
 export const projects: Array<Project> = [
     {
-        name: "crunchdao",
+        name: "CrunchDAO",
         description: "The startup I currently part of",
         link: "https://github.com/crunchdao",
         languages: [
