@@ -1,6 +1,6 @@
 <template>
   <v-btn color="primary" target="_blank" :href="props.url" icon>
-    <v-icon>{{ props.icon }}</v-icon>
+    <img height="24" width="24" :src="props.icon" />
     <v-tooltip activator="parent" location="top">
       {{ props.description }}
     </v-tooltip>

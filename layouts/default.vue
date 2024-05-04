@@ -1,19 +1,29 @@
 <script lang="ts" setup>
+import githubIcon from "~/assets/icons/github.svg"
+import gmailIcon from "~/assets/icons/gmail.svg"
+import linkedinIcon from "~/assets/icons/linkedin.svg"
+import myanimelistIcon from "~/assets/icons/myanimelist.svg"
+
 const footerLinks = [
   {
     description: "Send me an email",
-    icon: "mdi-email",
+    icon: gmailIcon,
     url: "mailto:caceresenzo1502@gmail.com",
   },
   {
     description: "See my projects",
-    icon: "mdi-github",
+    icon: githubIcon,
     url: "https://github.com/Caceresenzo",
   },
   {
     description: "Linked-in",
-    icon: "mdi-linkedin",
+    icon: linkedinIcon,
     url: "https://www.linkedin.com/in/enzo-caceres/",
+  },
+  {
+    description: "Send help",
+    icon: myanimelistIcon,
+    url: "https://myanimelist.net/profile/Caceresenzo",
   },
 ];
 </script>

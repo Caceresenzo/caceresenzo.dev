@@ -16,7 +16,7 @@ useSeoMeta({
       <v-card class="py-4">
         <div class="d-flex justify-center">
           <v-avatar class="mt-2" color="primary" size="128">
-            <v-img max-height="150" max-width="250" :src="headImage" />
+            <img height="128" width="128" :src="headImage" />
           </v-avatar>
         </div>
         <v-card-title class="headline d-flex justify-center mt-4">
