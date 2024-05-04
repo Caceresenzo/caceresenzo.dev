@@ -7,13 +7,21 @@ const props = defineProps<{
 </script>
 
 <template>
-  <v-list-item
-    lines="two"
-    target="_blank"
-    :href="props.project.link"
-    :title="props.project.name"
-    :subtitle="props.project.description"
-  >
+  <v-list-item lines="two" target="_blank" :href="props.project.link">
+    <v-list-item-title class="d-flex flex-row align-center">
+      {{ props.project.name }}
+      <v-chip
+        size="small"
+        class="text-uppercase ml-2"
+        :color="props.project.quality.color"
+        style="height: 16px"
+      >
+        {{ props.project.quality.value }}
+      </v-chip>
+    </v-list-item-title>
+    <v-list-item-subtitle>
+      {{ props.project.description }}
+    </v-list-item-subtitle>
     <v-list-item-subtitle class="my-1">
       <v-chip
         v-for="language in props.project.languages"

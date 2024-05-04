@@ -7,7 +7,13 @@ export interface Project {
     logo?: string,
     languages: Array<string>
     link: string,
+    quality: Quality,
     children?: Array<Project>
+}
+
+export interface Quality {
+    value: string;
+    color: string;
 }
 
 function collection(collection: Omit<Project, "languages">): Project {
@@ -38,12 +44,20 @@ export const projects: Array<Project> = [
             "nginx",
             "git",
         ],
+        quality: {
+            value: "startup",
+            color: "primary"
+        }
     },
     collection({
         name: "42",
         description: "All of my work from the 42 school",
         logo: fortyTwoLogo,
         link: "https://github.com/Caceresenzo/42",
+        quality: {
+            value: "school",
+            color: "primary"
+        },
         children: [
             {
                 name: "kfs",
@@ -52,6 +66,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c++",
                 ],
+                quality: {
+                    value: "good",
+                    color: "success"
+                }
             },
             {
                 name: "ssl_md5",
@@ -60,6 +78,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c",
                 ],
+                quality: {
+                    value: "good",
+                    color: "success"
+                }
             },
             {
                 name: "webserv",
@@ -68,6 +90,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c++",
                 ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
             },
             {
                 name: "cloud-1",
@@ -78,6 +104,10 @@ export const projects: Array<Project> = [
                     "aws",
                     "terraform",
                 ],
+                quality: {
+                    value: "good?",
+                    color: "success"
+                }
             },
             {
                 name: "scop",
@@ -86,6 +116,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c++",
                 ],
+                quality: {
+                    value: "good",
+                    color: "success"
+                }
             },
             {
                 name: "Inception-of-Things",
@@ -95,6 +129,10 @@ export const projects: Array<Project> = [
                     "kubernetes",
                     "vagrant",
                 ],
+                quality: {
+                    value: "good?",
+                    color: "success"
+                }
             },
             {
                 name: "nm",
@@ -103,6 +141,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c",
                 ],
+                quality: {
+                    value: "good",
+                    color: "success"
+                }
             },
             {
                 name: "transcendence",
@@ -112,6 +154,10 @@ export const projects: Array<Project> = [
                     "javascript",
                     "mysql",
                 ],
+                quality: {
+                    value: "average+",
+                    color: "warning"
+                }
             },
             {
                 name: "containers",
@@ -120,6 +166,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c++",
                 ],
+                quality: {
+                    value: "average+",
+                    color: "warning"
+                }
             },
             {
                 name: "cub3d",
@@ -128,6 +178,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c",
                 ],
+                quality: {
+                    value: "average-",
+                    color: "warning"
+                }
             },
             {
                 name: "printf",
@@ -136,6 +190,10 @@ export const projects: Array<Project> = [
                 languages: [
                     "c",
                 ],
+                quality: {
+                    value: "bad",
+                    color: "error"
+                }
             },
         ]
     }),
@@ -144,12 +202,20 @@ export const projects: Array<Project> = [
         description: "All of my work from the piscine of 42 school",
         link: "https://github.com/Caceresenzo/42",
         languages: ["c", "bash", "git"],
+        quality: {
+            value: "school",
+            color: "primary"
+        },
     },
     {
         name: "caceresenzo.dev (this)",
         description: "Source code of this website",
         link: "https://github.com/Caceresenzo/caceresenzo.dev",
         languages: ["docker", "vue.js", "nginx", "git"],
+        quality: {
+            value: "average",
+            color: "warning"
+        },
     },
     {
         name: "My IUT Schedule",
@@ -157,29 +223,49 @@ export const projects: Array<Project> = [
             "A simple calendar-like app for checking next lessons from the IUT I left for 42",
         link: "https://github.com/Caceresenzo/My-IUT-Schedule",
         languages: ["android", "git"],
+        quality: {
+            value: "good-ish",
+            color: "success"
+        },
     },
     {
         name: "BoxPlay",
         description: "A Netflix clone, but even better ;)",
         link: "https://github.com/Caceresenzo/boxplay-android",
         languages: ["android", "git"],
+        quality: {
+            value: "good-",
+            color: "success"
+        },
     },
     {
         name: "Mon Guide Musculation",
         description: "My first Flutter app",
         link: "https://github.com/Caceresenzo/MonGuideMusculation",
         languages: ["flutter", "git"],
+        quality: {
+            value: "average-",
+            color: "warning"
+        },
     },
     {
         name: "Negro SA",
         description: "Work done for Negro SA",
         link: "https://github.com/Caceresenzo/negrosa",
         languages: ["java", "spring", "vue.js", "flutter", "docker", "git"],
+        quality: {
+            value: "average-",
+            color: "warning"
+        },
     },
     {
         name: "JELDWEN",
         description: "Work done for JELDWEN",
         link: "https://github.com/Caceresenzo/jeldwen",
         languages: ["java", "spring", "vue.js", "docker", "git"],
+        quality: {
+            value: "average-",
+            color: "warning"
+        },
     },
 ];
