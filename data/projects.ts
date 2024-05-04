@@ -1,5 +1,10 @@
 import crunchdaoLogo from "~/assets/logo/crunchdao.jpg"
 import fortyTwoLogo from "~/assets/logo/42.png"
+import boxplayLogo from "~/assets/logo/boxplay.png"
+import negrosaLogo from "~/assets/logo/negrosa.jpg"
+import monGuideMusculationLogo from "~/assets/logo/mon-guide-musculation.png"
+import myIutSchedule from "~/assets/logo/my-iut-schedule.png"
+import jeldwenLogo from "~/assets/logo/jeldwen.jpg"
 
 export interface Project {
     name: string,
@@ -404,6 +409,7 @@ export const projects: Array<Project> = [
     {
         name: "42 Piscine",
         description: "All of my work from the piscine of 42 school",
+        logo: fortyTwoLogo,
         link: "https://github.com/Caceresenzo/42",
         languages: ["c", "bash", "git"],
         quality: {
@@ -434,6 +440,7 @@ export const projects: Array<Project> = [
         name: "My IUT Schedule",
         description:
             "A simple calendar-like app for checking next lessons from the IUT I left for 42",
+        logo: myIutSchedule,
         link: "https://github.com/Caceresenzo/My-IUT-Schedule",
         languages: ["android", "git"],
         quality: {
@@ -444,6 +451,7 @@ export const projects: Array<Project> = [
     {
         name: "BoxPlay",
         description: "A Netflix clone, but even better ;)",
+        logo: boxplayLogo,
         link: "https://github.com/Caceresenzo/boxplay-android",
         languages: ["android", "git"],
         quality: {
@@ -454,6 +462,7 @@ export const projects: Array<Project> = [
     {
         name: "Mon Guide Musculation",
         description: "My first Flutter app",
+        logo: monGuideMusculationLogo,
         link: "https://github.com/Caceresenzo/MonGuideMusculation",
         languages: ["flutter", "git"],
         quality: {
@@ -464,6 +473,7 @@ export const projects: Array<Project> = [
     {
         name: "Negro SA",
         description: "Work done for Negro SA",
+        logo: negrosaLogo,
         link: "https://github.com/Caceresenzo/negrosa",
         languages: ["java", "spring", "vue.js", "flutter", "docker", "git"],
         quality: {
@@ -474,6 +484,7 @@ export const projects: Array<Project> = [
     {
         name: "JELDWEN",
         description: "Work done for JELDWEN",
+        logo: jeldwenLogo,
         link: "https://github.com/Caceresenzo/jeldwen",
         languages: ["java", "spring", "vue.js", "docker", "git"],
         quality: {
