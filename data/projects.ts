@@ -1,4 +1,5 @@
 import crunchdaoLogo from "~/assets/logo/crunchdao.jpg"
+import codecraftersLogo from "~/assets/logo/codecrafters.webp"
 import fortyTwoLogo from "~/assets/logo/42.png"
 import boxplayLogo from "~/assets/logo/boxplay.png"
 import negrosaLogo from "~/assets/logo/negrosa.jpg"
@@ -408,6 +409,160 @@ export const projects: Array<Project> = [
             },
         ]
     }),
+    collection({
+        name: "CodeCrafters Challenges",
+        description: "Nice challenges to re-create amazing tools",
+        logo: codecraftersLogo,
+        link: "https://codecrafters.io/",
+        quality: {
+            value: "challenge",
+            color: "primary"
+        },
+        children: [
+            {
+                name: "HTTP Server (Java)",
+                description: "Simple HTTP Server in Java",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-http--java",
+                skills: [
+                    "java",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "BitTorrent (Java)",
+                description: "Simple Torrent Client in Java",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-bittorrent--java",
+                skills: [
+                    "java",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "DNS Server (Java)",
+                description: "Simple DNS server in Java",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-dns-server--java",
+                skills: [
+                    "java",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "Docker (Java)",
+                description: "Simple Docker in Python",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-docker--python",
+                skills: [
+                    "python",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "Git (Java)",
+                description: "Simple Git in Java",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-git--java",
+                skills: [
+                    "java",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "SQLite (Java)",
+                description: "Simple SQLite in Java",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-sqlite--java",
+                skills: [
+                    "java",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "Redis (Java)",
+                description: "Simple Redis (with all extensions) in Java",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-redis--java",
+                skills: [
+                    "java",
+                ],
+                quality: {
+                    value: "average",
+                    color: "warning"
+                }
+            },
+            {
+                name: "HTTP Server (Rust)",
+                description: "Simple HTTP Server in Rust",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-http--rust",
+                skills: [
+                    "rust",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "HTTP Server (Python)",
+                description: "Simple HTTP Server in Python",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-http--python",
+                skills: [
+                    "python",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+            {
+                name: "HTTP Server (TypeScript)",
+                description: "Simple HTTP Server in TypeScript",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-http--typescript",
+                skills: [
+                    "javascript",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
+        ]
+    }),
+    {
+        name: "Voxel",
+        description: "A simple multiplayer voxel",
+        link: "https://github.com/Caceresenzo/voxel",
+        skills: ["java"],
+        deprecated: true,
+        quality: {
+            value: "good-ish",
+            color: "success"
+        },
+    },
+    {
+        name: "Cheapwatch",
+        description: "The beginning of an Overwatch clone",
+        link: "https://github.com/Caceresenzo/cheapwatch",
+        skills: ["java"],
+        deprecated: true,
+        quality: {
+            value: "good-ish",
+            color: "success"
+        },
+    },
     {
         name: "42 Piscine",
         description: "All of my work from the piscine of 42 school",
@@ -426,6 +581,16 @@ export const projects: Array<Project> = [
         quality: {
             value: "hobby",
             color: "primary"
+        },
+    },
+    {
+        name: "BarCutOptimizer",
+        description: "Optimizer for minimizing loss when doing cuts in a lot of bars",
+        link: "https://github.com/Caceresenzo/BarCutOptimizer",
+        skills: ["java"],
+        quality: {
+            value: "bad+",
+            color: "error"
         },
     },
     {

@@ -41,6 +41,11 @@ export const skills: Array<Skill> = [
         icon: "cplusplus/cplusplus-original.svg",
     },
     {
+        name: "Rust",
+        description: "Enums are basically Java-records",
+        icon: "rust/rust-original.svg",
+    },
+    {
         name: "Docker",
         description: "I can't live without them now...",
         icon: "docker/docker-original.svg",
