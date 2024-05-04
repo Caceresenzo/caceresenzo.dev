@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import type { Project } from '~/data/projects';
+
 const props = defineProps<{
   language: {
     icon: string;
   };
-  projects: Array<object>;
+  projects: Array<Project>;
 }>();
 </script>
 
@@ -12,8 +14,8 @@ const props = defineProps<{
     <v-expansion-panel-title>
       <v-avatar size="80">
         <img
-          max-height="64"
-          max-width="64"
+          height="56"
+          width="56"
           :src="`https://raw.githubusercontent.com/devicons/devicon/master/icons/${props.language.icon}`"
         />
       </v-avatar>
