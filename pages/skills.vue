@@ -1,8 +1,14 @@
 <script lang="ts" setup>
 import type { Skill } from "~/data/skills";
 import { skills } from "~/data/skills";
-
 import { projects } from "~/data/projects";
+
+useSeoMeta({
+  title: "Skills",
+  ogTitle: "Enzo CACERES's Skills",
+  description: "List of my skills.",
+  ogDescription: "The list of all my skills!",
+});
 
 function getProject(skill: Skill) {
   const lower = skill.name.toLowerCase();

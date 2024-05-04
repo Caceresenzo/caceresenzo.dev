@@ -1,5 +1,13 @@
 <script lang="ts" setup>
 import headImage from "~/assets/head.jpg";
+
+useSeoMeta({
+  title: "caceresenzo.dev",
+  ogTitle: "Enzo CACERES's website",
+  description: "Another boring developer portfolio website.",
+  ogDescription: "Another boring developer portfolio website.",
+  ogImage: headImage,
+});
 </script>
 
 <template>

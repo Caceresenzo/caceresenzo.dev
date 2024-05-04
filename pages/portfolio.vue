@@ -1,5 +1,12 @@
 <script lang="ts" setup>
 import { projects } from "~/data/projects";
+
+useSeoMeta({
+  title: "Portfolio",
+  ogTitle: "Enzo CACERES's Portfolio",
+  description: "List of the project I did so far.",
+  ogDescription: "The list of all the project I ever did!",
+});
 </script>
 
 <template>
