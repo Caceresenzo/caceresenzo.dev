@@ -64,7 +64,7 @@ const footerLinks = [
     <v-main>
       <slot />
     </v-main>
-    <v-footer class="justify-center mt-8" style="gap: 8px" app>
+    <v-footer class="justify-center mt-8" style="gap: 8px" app height="64">
       <footer-link
         v-for="(link, index) in footerLinks"
         :key="index"
