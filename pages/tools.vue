@@ -63,6 +63,7 @@ function selectAll() {
                     multiple
                     style="transform: scale(1.5)"
                     hide-details
+                    @click.stop
                   />
                 </client-only>
               </template>
