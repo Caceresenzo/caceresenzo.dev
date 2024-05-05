@@ -35,10 +35,10 @@ const installLine = computed(() =>
               <template #prepend>
                 <v-avatar size="80">
                   <img
-                    v-if="tool.wingetPackage"
+                    v-if="tool.icon"
                     height="56"
                     width="56"
-                    :src="`https://api.winstall.app/icons/next/${tool.wingetPackage}.webp`"
+                    :src="tool.icon"
                   />
                 </v-avatar>
               </template>
