@@ -16,6 +16,12 @@ const installLine = computed(() =>
     .map((package_) => `winget install --id=${package_} -e`)
     .join("\n")
 );
+
+function selectAll() {
+  selectedWingetPackages.value = tools
+    .map(({ wingetPackage }) => wingetPackage)
+    .filter(Boolean);
+}
 </script>
 
 <template>
@@ -23,6 +29,13 @@ const installLine = computed(() =>
     <v-row justify="center" align="center">
       <v-col cols="12">
         <v-card title="Tools">
+          <client-only>
+            <v-card-title class="d-flex flex-row justify-end">
+              <v-btn variant="flat" color="primary" @click="selectAll">
+                select all
+              </v-btn>
+            </v-card-title>
+          </client-only>
           <v-list>
             <v-list-item
               v-for="tool in tools"
