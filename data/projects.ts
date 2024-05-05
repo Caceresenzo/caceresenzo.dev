@@ -170,7 +170,7 @@ export const projects: Array<Project> = [
                 internal: true,
                 quality: {
                     value: "good-ish",
-                    color: "warning"
+                    color: "success"
                 }
             },
             {
