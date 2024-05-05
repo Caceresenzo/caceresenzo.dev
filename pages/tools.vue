@@ -43,13 +43,15 @@ const installLine = computed(() =>
                 </v-avatar>
               </template>
               <template v-if="tool.wingetPackage" #append>
-                <v-checkbox
-                  v-model="selectedWingetPackages"
-                  :value="tool.wingetPackage"
-                  multiple
-                  style="transform: scale(1.5)"
-                  hide-details
-                />
+                <client-only>
+                  <v-checkbox
+                    v-model="selectedWingetPackages"
+                    :value="tool.wingetPackage"
+                    multiple
+                    style="transform: scale(1.5)"
+                    hide-details
+                  />
+                </client-only>
               </template>
             </v-list-item>
           </v-list>
@@ -57,31 +59,33 @@ const installLine = computed(() =>
       </v-col>
     </v-row>
   </v-container>
-  <v-dialog max-width="600">
-    <template #activator="{ props: activatorProps }">
-      <v-fab
-        v-if="selectedWingetPackages.length"
-        color="primary"
-        icon="mdi-download"
-        size="64"
-        appear
-        style="position: fixed; right: 80px; bottom: 80px; z-index: 1000"
-        v-bind="activatorProps"
-      />
-    </template>
-    <template #default="{ isActive }">
-      <v-card title="Install command">
-        <v-card-text>
-          <v-code>
-            <pre>{{ installLine }}</pre>
-          </v-code>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn text="Copy" @click="copy(installLine)" />
-          <v-btn text="Close" @click="isActive.value = false" />
-        </v-card-actions>
-      </v-card>
-    </template>
-  </v-dialog>
+  <client-only>
+    <v-dialog max-width="600">
+      <template #activator="{ props: activatorProps }">
+        <v-fab
+          v-if="selectedWingetPackages.length"
+          color="primary"
+          icon="mdi-download"
+          size="64"
+          appear
+          style="position: fixed; right: 80px; bottom: 80px; z-index: 1000"
+          v-bind="activatorProps"
+        />
+      </template>
+      <template #default="{ isActive }">
+        <v-card title="Install command">
+          <v-card-text>
+            <v-code>
+              <pre>{{ installLine }}</pre>
+            </v-code>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn text="Copy" @click="copy(installLine)" />
+            <v-btn text="Close" @click="isActive.value = false" />
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
+  </client-only>
 </template>
