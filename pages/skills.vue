@@ -18,18 +18,20 @@ function getProject(skill: Skill) {
 </script>
 
 <template>
-  <v-row justify="center" align="center" class="mt-4">
-    <v-col cols="12" sm="10" md="8">
-      <v-card title="Skills">
-        <v-expansion-panels>
-          <skill-expansion-panel
-            v-for="(skill, index) in skills"
-            :key="index"
-            :skill="skill"
-            :projects="getProject(skill)"
-          />
-        </v-expansion-panels>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container>
+    <v-row justify="center" align="center">
+      <v-col cols="12">
+        <v-card title="Skills">
+          <v-expansion-panels>
+            <skill-expansion-panel
+              v-for="(skill, index) in skills"
+              :key="index"
+              :skill="skill"
+              :projects="getProject(skill)"
+            />
+          </v-expansion-panels>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>

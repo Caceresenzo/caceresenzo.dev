@@ -19,53 +19,53 @@ const installLine = computed(() =>
 </script>
 
 <template>
-  <v-row justify="center" align="center" class="mt-4">
-    <v-col cols="12" sm="10" md="8">
-      <v-card title="Tools">
-        <v-list>
-          <v-list-item
-            v-for="tool in tools"
-            :key="tool.name"
-            :title="tool.name"
-            :subtitle="tool.description"
-            :href="tool.downloadLink"
-            target="_blank"
-          >
-            <template #prepend>
-              <v-avatar size="80">
-                <img
-                  v-if="tool.wingetPackage"
-                  height="56"
-                  width="56"
-                  :src="`https://api.winstall.app/icons/next/${tool.wingetPackage}.webp`"
+  <v-container>
+    <v-row justify="center" align="center">
+      <v-col cols="12">
+        <v-card title="Tools">
+          <v-list>
+            <v-list-item
+              v-for="tool in tools"
+              :key="tool.name"
+              :title="tool.name"
+              :subtitle="tool.description"
+              :href="tool.downloadLink"
+              target="_blank"
+            >
+              <template #prepend>
+                <v-avatar size="80">
+                  <img
+                    v-if="tool.wingetPackage"
+                    height="56"
+                    width="56"
+                    :src="`https://api.winstall.app/icons/next/${tool.wingetPackage}.webp`"
+                  />
+                </v-avatar>
+              </template>
+              <template v-if="tool.wingetPackage" #append>
+                <v-checkbox
+                  v-model="selectedWingetPackages"
+                  :value="tool.wingetPackage"
+                  multiple
+                  style="transform: scale(1.5)"
+                  hide-details
                 />
-              </v-avatar>
-            </template>
-            <template v-if="tool.wingetPackage" #append>
-              <v-checkbox
-                v-model="selectedWingetPackages"
-                :value="tool.wingetPackage"
-                multiple
-                style="transform: scale(1.5)"
-                hide-details
-              />
-            </template>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </v-col>
-  </v-row>
+              </template>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
   <v-dialog max-width="600">
     <template #activator="{ props: activatorProps }">
       <v-fab
         v-if="selectedWingetPackages.length"
         color="primary"
         icon="mdi-download"
-        class="me-4 mb-4"
-        location="bottom end"
         size="64"
-        app
         appear
+        style="position: fixed; right: 80px; bottom: 80px; z-index: 1000"
         v-bind="activatorProps"
       />
     </template>
