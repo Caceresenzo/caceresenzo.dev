@@ -231,7 +231,7 @@ export const projects: Array<Project> = [
             },
             {
                 name: "Trading Platform",
-                description: "Unitified platform that can connect to multiple broker",
+                description: "Unified platform that can connect to multiple broker",
                 skills: [
                     "java",
                     "spring",
