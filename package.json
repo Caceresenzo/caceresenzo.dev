@@ -14,5 +14,8 @@
     "vue": "^3.4.26",
     "vue-router": "^4.3.2",
     "vuetify-nuxt-module": "^0.13.5"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "^3.3.3"
   }
 }
