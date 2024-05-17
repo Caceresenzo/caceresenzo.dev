@@ -33,6 +33,7 @@ import awsIcon from "~/assets/tools/aws.svg";
 import virtualboxIcon from "~/assets/tools/virtualbox.png";
 import sysinternalsIcon from "~/assets/tools/sysinternals.png";
 import battlenetIcon from "~/assets/tools/battlenet.svg";
+import screentogifIcon from "~/assets/tools/screentogif.png";
 
 export interface Tool {
     name: string
@@ -283,5 +284,12 @@ export const tools: Array<Tool> = [
         description: "Overwatch",
         icon: battlenetIcon,
         downloadLink: "https://download.battle.net/en-us/desktop"
+    },
+    {
+        name: "ScreenToGif",
+        description: "Quick recorder",
+        icon: screentogifIcon,
+        wingetPackage: "NickeManarin.ScreenToGif",
+        downloadLink: "https://www.screentogif.com/"
     }
 ].sort(({ name: a }, { name: b }) => a.localeCompare(b))
