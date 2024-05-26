@@ -575,6 +575,16 @@ export const projects: Array<Project> = [
         },
     },
     {
+        name: "Modern Rotation Control",
+        description: "Clone of a popular application I was using, but with the features I wanted",
+        skills: ["java", "android"],
+        link: "https://github.com/Caceresenzo/modern-rotation-control",
+        quality: {
+            value: "hobby",
+            color: "primary"
+        },
+    },
+    {
         name: "Home Lab",
         description: "Hosting a HP DL380P Gen9 at home",
         skills: ["bash", "sys-admin", "esxi"],
