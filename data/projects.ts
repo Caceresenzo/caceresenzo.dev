@@ -539,6 +539,18 @@ export const projects: Array<Project> = [
                     color: "success"
                 }
             },
+            {
+                name: "HTTP Server (C)",
+                description: "Simple HTTP Server in C",
+                link: "https://github.com/Caceresenzo/codecrafters--build-your-own-http--c",
+                skills: [
+                    "c",
+                ],
+                quality: {
+                    value: "good-ish",
+                    color: "success"
+                }
+            },
         ]
     }),
     {
