@@ -12,7 +12,7 @@ export const skills: Array<Skill> = [
     },
     {
         name: "Spring",
-        description: "My go to for doing APIs",
+        description: "My go-to for doing APIs",
         icon: "spring/spring-original.svg",
     },
     {
@@ -72,7 +72,7 @@ export const skills: Array<Skill> = [
     },
     {
         name: "Android",
-        description: "Hard to make a simple thing, but cool once it work",
+        description: "Hard to make a simple thing, but cool once it works",
         icon: "android/android-original.svg",
     },
     {
