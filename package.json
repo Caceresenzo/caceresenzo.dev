@@ -10,10 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.11.2",
-    "vue": "^3.4.26",
-    "vue-router": "^4.3.2",
-    "vuetify-nuxt-module": "^0.13.5"
+    "nuxt": "^4.0.3",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1",
+    "vuetify-nuxt-module": "^0.18.7"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.3"
